@@ -2,25 +2,17 @@ package acceptance
 
 import com.parker0phil.roulette.ConsoleApplication
 import org.junit.Rule
-import org.junit.contrib.java.lang.system.TextFromStandardInputStream
+import org.junit.contrib.java.lang.system.SystemOutRule
+import spock.lang.Specification
 
 import java.time.Clock
 
-import static org.junit.contrib.java.lang.system.TextFromStandardInputStream.emptyStandardInputStream;
-import org.junit.contrib.java.lang.system.SystemOutRule;
-import spock.lang.Specification
-
-
 class ConsoleApplicationSpec extends Specification {
-
-
-    @Rule
-    public final TextFromStandardInputStream systemInput = emptyStandardInputStream();
 
     @Rule
     public final SystemOutRule systemOutRule = new SystemOutRule().mute().enableLog();
 
-    def "outputs correctly with delay"(){
+    def "outputs correctly with delay"() {
         given:
         def clock = Clock.systemDefaultZone()
 
@@ -28,7 +20,7 @@ class ConsoleApplicationSpec extends Specification {
         long start = clock.millis()
         new ConsoleApplication().main()
         long end = clock.millis()
-        def output =  systemOutRule.getLog();
+        def output = systemOutRule.getLog();
 
         then:
         end - start >= 20000

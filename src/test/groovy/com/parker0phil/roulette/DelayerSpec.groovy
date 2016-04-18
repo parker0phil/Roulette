@@ -7,21 +7,23 @@ import java.time.Clock
 class DelayerSpec extends Specification {
 
     def "delayer calls back after period"() {
+        def START_TIME = 10000
+        def END_TIME = START_TIME + 20000
 
         given:
         def clock = Mock(Clock)
-        clock.millis() >>> [10000, 10000, 29000, 30000]
+        clock.millis() >>> [START_TIME, START_TIME + 1, END_TIME - 1, END_TIME]
         def delayer = new Delayer(clock, 20)
 
         when:
 
         def finishedImmediately = delayer.finished()
-        def finhishedBeforeBoundary = delayer.finished()
-        def finishedAfterBoundary = delayer.finished()
+        def finishedBeforeBoundary = delayer.finished()
+        def finishedAtBoundary = delayer.finished()
 
         then:
         finishedImmediately == false
-        finhishedBeforeBoundary == false
-        finishedAfterBoundary == true
+        finishedBeforeBoundary == false
+        finishedAtBoundary == true
     }
 }

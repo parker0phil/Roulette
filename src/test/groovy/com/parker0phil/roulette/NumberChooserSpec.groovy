@@ -21,15 +21,15 @@ class NumberChooserSpec extends Specification {
         chosen == anyNumber
     }
 
-    def "number chooser selects all options (for the paranoid - but spotted mistake in the upper bound exclusivity)"(){
+    def "number chooser selects all options (for the paranoid - but spotted mistake in the upper bound exclusivity)"() {
 
         given:
         def chooser = new NumberChooser(SecureRandom.instanceStrong)
-        def allNumbers = (ArrayList)(0..36)
+        def allNumbers = ( ArrayList ) (0..36)
         when:
-        while(allNumbers.size() > 0){
+        while ( allNumbers.size() > 0 ) {
             Integer next = chooser.choose()
-            allNumbers.remove((Object)next)
+            allNumbers.remove(( Object ) next)
         }
 
         then:
