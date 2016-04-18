@@ -22,9 +22,11 @@ Design and implement a roulette wheel using TDD. Think about how using time and 
 
 # Build/Test
 
-'/gradlew clean build'
-'java -cp build/classes/main com.parker0phil.roulette.ConsoleApplication'
-'/gradlew clean build -Dtest.include.slow' (if you want to include the 20 second slow running acceptance test)
+`./gradlew clean build`
+
+`java -cp build/classes/main com.parker0phil.roulette.ConsoleApplication`
+
+`./gradlew clean build -Dtest.include.slow` (if you want to include the 20 second slow-running acceptance test)
 
 # TODO:
 
