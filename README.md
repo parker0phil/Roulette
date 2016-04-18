@@ -24,13 +24,14 @@ Design and implement a roulette wheel using TDD. Think about how using time and 
 
 '/gradlew clean build'
 'java -cp build/classes/main com.parker0phil.roulette.ConsoleApplication'
+'/gradlew clean build -Dtest.include.slow' (if you want to include the 20 second slow running acceptance test)
 
 # TODO:
 
 - [X] Git/Gradle
 - [X] Console input/output Walking Skeleton
 - [X] Select a random number
-- [ ] Delay by x seconds
+- [X] Delay by x seconds
 - [ ] Use properly ordered roulette wheel stream
 - [ ] Deliver non-final (near miss/bounce) numbers periodically
 - [ ] Better model wheel/ball 
