@@ -27,9 +27,9 @@ Design and implement a roulette wheel using TDD. Think about how using time and 
 
 # TODO:
 
-- [ ] Git/Gradle
-- [ ] Console input/output Walking Skeleton
-- [ ] Select a random number
+- [X] Git/Gradle
+- [X] Console input/output Walking Skeleton
+- [X] Select a random number
 - [ ] Delay by x seconds
 - [ ] Use properly ordered roulette wheel stream
 - [ ] Deliver non-final (near miss/bounce) numbers periodically

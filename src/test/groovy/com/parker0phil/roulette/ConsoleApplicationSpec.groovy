@@ -17,8 +17,12 @@ class ConsoleApplicationSpec extends Specification {
     def "outputs correctly"(){
         when:
         new ConsoleApplication().main()
+        def output =  systemOutRule.getLog();
 
         then:
-        systemOutRule.getLog() == "Done.\n"
+        int response = Integer.parseInt((output =~ "(.*)\n")[0][1])
+        response <= 36
+        response >= 0
+
     }
 }

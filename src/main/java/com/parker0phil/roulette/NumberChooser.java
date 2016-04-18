@@ -12,6 +12,6 @@ public class NumberChooser {
 
     public int choose(){
         //the next pseudorandom, uniformly distributed {@code int} value between zero (inclusive)
-        return source.nextInt(36);
+        return source.nextInt(37);
     }
 }
