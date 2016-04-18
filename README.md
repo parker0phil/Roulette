@@ -5,7 +5,7 @@
 **Estimated Duration:** 1-3 hours
 
 **Author:** James Jeffries
-                                                                          git stat
+                                                                         
 **Language(s)/stacks:** Any
 
 **Summary:**
