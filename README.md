@@ -49,6 +49,6 @@ Design and implement a roulette wheel using TDD. Think about how using time and 
 
 # Suggestions:
 
-- Make it clear how someone is expected to interact with the system (maybe suggest it is a console app with SPACE bar presses re-spinning the wheel)
-- Perhaps add a little more state to the exercise (e.g. the console should say "WHAT ARE THE CHANCES!" if the same number comes twice in a row.
+- Make it clear how someone is expected to interact with the system (maybe suggest it is a console app with SPACE bar presses re-spinning the wheel?)
+- Perhaps add a little more state to the exercise (e.g. the console should say "WHAT ARE THE CHANCES?!" if the same number comes twice in a row).
 - Suggest an extension to the codebase (maybe after first part of coding has been completed). For example adding a 00, a common feature of roulette wheels, would be interesting considering lots of people will have gone for an int based solution!
